@@ -9,11 +9,10 @@
 </head>
 <body>
   <div class="image-sidebar">
-    <img src="rocks.jpg" 
-    alt="Well-balanced stack of grey rocks on the beach.">
     <div class="logo-ribbon-container">
-      <img src="apeFruit.png" alt="Aubergine with the face of an ape.">
-      <h1 class="logo-text">ApeFruit Services</h1>
+      <img src="apeFruit.png" id="apeFruitLogo"
+      alt="ApeFruit Services logo: Aubergine with the face of an ape.">
+      <h1 class="logo-text">ApeFruit</h1>
     </div>
     <footer class="image-credits">
       Photo by 
@@ -27,42 +26,55 @@
     </footer>
   </div>
   <main>
-    <header class="intro-text">
-      Sign up today for ApeFruit Services and we will send you your 
-      own ApeFruit<sup>TM</sup> personalised to suit your personal information.
-      Apefruit Services. We don't monkey around.
-    </header>
-    
+    <div class="header-container">
+      <header class="intro-text">
+        <p>
+          Sign up today for ApeFruit Services and we will send you your
+          own ApeFruit<sup>TM</sup> flagship ApeFruit consumables 
+          to suit <em>your</em> personal information, <strong>at no cost.</strong>
+        </p>
+        <p>ApeFruit Services. We don't monkey around.</p>
+      </header>
+    </div>
+    <div class="form-text-ribbon"></div>
     <form class="signup">
-      <div class="text-ribbon-container">
-        <header class="form-title">
-
-        </header>
+      <header class="form-title">
+        <p>This is what we need from you...</p>
+      </header>
+      <div class="form-columns">
         <div class="left-hand-side">
-          <label for="first-name"></label>
-          <input type="text" id="first-name">
-
-          <label for="email"></label>
-          <input type="email" id="email">
-
-          <label for="password"></label>
-          <input type="password" id="password">
+          <div class="form-field">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name">
+          </div>
+          <div class="form-field">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email">
+          </div>
+          <div class="form-field">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password">
+          </div>
         </div>
         <div class="right-hand-side">
-          <label for="last-name"></label>
-          <input type="text" id="last-name">
-
-          <label for="phone-number"></label>
-          <input type="tel" id="phone-number">
-
-          <label for="confirm-password"></label>
-          <input type="password" id="confirm-password">
+          <div class="form-field">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name">
+          </div>
+          <div class="form-field">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" id="phone-number">
+          </div>
+          <div class="form-field">
+            <label for="confirm-password">CONFIRM PASSWORD</label>
+            <input type="password" id="confirm-password">
+          </div>
         </div>
       </div>
       <input type="submit" value="Create Account">
     </form>
     <footer class="returning-users-area">
-      Already have an account? <a href="theInternet.com">Log In</a>
+      Already have an account? <a href="http://theInternet.ie">Log In</a>
     </footer>
   </main>
 </body>
