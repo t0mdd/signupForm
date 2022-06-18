@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up</title>
   <link rel="stylesheet" href="style.css">
+  <script src="validation.js" defer></script>
 </head>
 <body>
   <div class="image-sidebar">
@@ -36,39 +37,44 @@
         <p>ApeFruit Services. We don't monkey around.</p>
       </header>
     </div>
-    <div class="form-text-ribbon"></div>
     <form class="signup">
-      <header class="form-title">
-        <p>This is what we need from you...</p>
-      </header>
-      <div class="form-columns">
-        <div class="left-hand-side">
-          <div class="form-field">
-            <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name">
+      <div class="ribbon-container">
+        <header class="form-title">
+          <p>This is what we need from you...</p>
+        </header>
+        <div class="form-columns">
+          <div class="left-hand-side">
+            <div class="form-field">
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" id="first-name" placeholder="" required>
+            </div>
+            <div class="form-field">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" placeholder="" 
+              pattern=".+@.+\.(.+)" required>
+            </div>
+            <div class="form-field">
+              <label for="password">PASSWORD</label>
+              <input type="password" id="password" placeholder="" required>
+            </div>
           </div>
-          <div class="form-field">
-            <label for="email">EMAIL</label>
-            <input type="email" id="email">
-          </div>
-          <div class="form-field">
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password">
+          <div class="right-hand-side">
+            <div class="form-field">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" id="last-name" placeholder="" required>
+            </div>
+            <div class="form-field">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input type="tel" id="phone-number" placeholder="" required>
+            </div>
+            <div class="form-field">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input type="password" placeholder="" id="confirm-password" required>
+            </div>
           </div>
         </div>
-        <div class="right-hand-side">
-          <div class="form-field">
-            <label for="last-name">LAST NAME</label>
-            <input type="text" id="last-name">
-          </div>
-          <div class="form-field">
-            <label for="phone-number">PHONE NUMBER</label>
-            <input type="tel" id="phone-number">
-          </div>
-          <div class="form-field">
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm-password">
-          </div>
+        <div class="error-msg-container">
+          <p class="error-msg"></p>
         </div>
       </div>
       <input type="submit" value="Create Account">

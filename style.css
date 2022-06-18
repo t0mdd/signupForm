@@ -8,10 +8,13 @@
   src: url(Moms_typewriter.ttf);
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   width: 100vw;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -75,8 +78,8 @@ main .header-container header {
   position: absolute;
   bottom: 40px;
   font-weight: 500;
-  font-size: max(16px,min(3vh, 2vw, 2rem));
-  line-height: calc(1.5*max(16px,min(3vh, 2vw, 2rem)));
+  font-size: max(20px,min(3vh, 2vw, 1.5rem));
+  line-height: calc(1.5*max(16px,min(3vh, 2vw, 1.5rem)));
 }
 
 strong{
@@ -93,7 +96,6 @@ sup {
 
 form {
   position: relative;
-  height: 35vh;
   z-index: 1;
   padding: 20px 40px;
 }
@@ -104,12 +106,13 @@ form header {
 
 .form-columns {
   display: flex;
-  height: 25vh;
   overflow: scroll;
 }
 
 .form-field {
-  margin: 10px 10px 10px 0;
+  margin: 5px 10px 10px 0;
+  overflow: visible;
+  padding: 0 5px;
 }
 
 form label{
@@ -120,29 +123,35 @@ form label{
 }
 
 input[type='submit'] {
-  height: 2em;
-  width: 30%;
+  height: 4vh;
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(150,0,250,0.2);
   color: rebeccapurple;
+  padding: 2px 10px;
 }
 
-.form-text-ribbon {
-  width: 65%;
-  height: calc(20px + 30vh);
+.ribbon-container {
+  width: 100%;
+  position: relative;
+  left: -40px;
+  padding: 20px 40px;
   background-color: white;
-  box-shadow: 0 2px 10px rebeccapurple;
-  z-index: 0;
-  position: absolute;
+  box-shadow: 2px 2px 5px rebeccapurple;
+  margin-bottom: 20px;
 }
 
 .form-columns input{
-  margin: 0 0 10px 0;
-  padding: 0;
+  margin: 5px 0 10px 0;
+  padding: 2px 10px;
   width: 90%;
-  height: 3vh;
+  height: 4vh;
   border-radius: 8px;
+}
+
+.form-columns input:focus{
+  border-color: royalblue;
+  box-shadow: 1px 1px 1px royalblue;
 }
 
 .form-columns .left-hand-side {
@@ -160,4 +169,31 @@ main footer {
 main footer a {
   text-decoration: none;
   color: royalblue;
+}
+
+.error-msg-container{
+  height: 3vh;
+  color: rgb(192, 24, 24);
+}
+
+.ribbon-container input:valid {
+  border-color: green;
+}
+
+.ribbon-container input:valid:focus {
+  border-color: green;
+  box-shadow: 1px 1px 1px green;
+}
+
+input:not(:placeholder-shown):invalid, .ribbon-container input.password-invalid{
+  border-color: red;
+}
+
+input:not(:placeholder-shown):invalid:focus, 
+.ribbon-container input.password-invalid:focus{
+  box-shadow: 1px 1px 1px red;
+}
+
+:focus {
+  outline: none;
 }
