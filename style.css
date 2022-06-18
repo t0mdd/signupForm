@@ -185,8 +185,8 @@ main footer a {
   box-shadow: 1px 1px 1px green;
 }
 
-input:not(:placeholder-shown):invalid, .ribbon-container input.password-invalid{
-  border-color: red;
+input:not(:placeholder-shown):invalid, .password-invalid{
+  border-color: red !important; 
 }
 
 input:not(:placeholder-shown):invalid:focus, 
